@@ -4,9 +4,7 @@
   "description": "",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html",
-    "predeploy": "npm run build",
-    "deploy": "netlify deploy -p"
+    "build": "parcel build src/*.html --public-url /clock/"
   },
   "repository": {
     "type": "git",
@@ -23,10 +21,9 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
-    "cssnano": "^5.1.14",
+    "gh-pages": "^5.0.0",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
-    "postcss": "^8.4.21",
     "posthtml-include": "^1.7.4"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
