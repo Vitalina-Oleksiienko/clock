@@ -1,0 +1,93 @@
+.clock{
+    width: calc(250px + (640 - 250) * ((100vw - 320px) / (1920 - 320)));
+    height: calc(250px + (640 - 250) * ((100vw - 320px) / (1920 - 320)));
+    margin-inline: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/2.png') center / cover no-repeat;
+    border: 5px solid #193741;
+    border-radius: 50%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    
+    
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #000;
+    }
+
+    .hour{
+        position: relative;
+
+        &__arrow{
+            position: relative;
+            width: 160px;
+            height: calc(130px + (190 - 130) * ((100vw - 320px) / (1920 - 320)));
+            display: flex;
+            justify-content: center;
+            border-radius: 50%;
+
+            &::before {
+                content: '';
+                position: absolute;
+                z-index: 2;
+                width: 12px;
+                height: 120px;
+                height: calc(80px + (120 - 80) * ((100vw - 320px) / (1920 - 320)));
+                background: #000;
+                border-radius: 5px 5px 0 0;
+            }
+        }
+    }
+
+    .minute{
+        position: absolute;
+
+        &__arrow{
+            position: relative;
+            width: 200px;
+            height: calc(150px + (250 - 150) * ((100vw - 320px) / (1920 - 320)));
+            display: flex;
+            justify-content: center;
+            border-radius: 50%;
+
+            &::before{
+                content: '';
+                position: absolute;
+                z-index: 3;
+                width: 4px;
+                height: calc(100px + (150 - 100) * ((100vw - 320px) / (1920 - 320)));
+                background: #265864;
+                border-radius: 5px 5px 0 0;
+            }
+        }
+    }
+
+    .second{
+        position: absolute;
+
+        &__arrow {
+            width: 230px;
+            height: calc(220px + (350 - 220) * ((100vw - 320px) / (1920 - 320)));
+            display: flex;
+            justify-content: center;
+            border-radius: 50%;
+
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 4;
+                width: 2px;
+                height: calc(130px + (200 - 130) * ((100vw - 320px) / (1920 - 320)));
+                background: #a31604;
+                border-radius: 5px 5px 0 0;
+            }
+        }
+    }
+}
